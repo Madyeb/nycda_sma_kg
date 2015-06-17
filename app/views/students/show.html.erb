@@ -1,0 +1,13 @@
+<h1>Student Profile</h1>
+
+<p><%= link_to "Back to Students", students_path %></p>
+
+<% if @student %>
+  <p><span>First name:</span> <%= @student.first_name %></p>
+  <p><span>Last name:</span> <%= @student.last_name %></p>
+  <p><span>Email:</span> <%= @student.email %></p>
+  <p><span>Phone:</span> <%= @student.phone %></p>
+  <p><span>Status:</span> <%= @student.status %></p>
+<% else %>
+  <p> Student not found </p>
+<% end %>
