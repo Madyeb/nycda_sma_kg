@@ -1,6 +1,7 @@
 <h1>Student Profile</h1>
 
 <p><%= link_to "Back to Students", students_path %></p>
+<p><%= link_to "Edit Student", edit_student_path(@student) %></p>
 
 <% if @student %>
   <p><span>First name:</span> <%= @student.first_name %></p>
