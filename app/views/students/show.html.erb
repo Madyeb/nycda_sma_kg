@@ -12,3 +12,12 @@
 <% else %>
   <p> Student not found </p>
 <% end %>
+
+
+<h2> Projects </h2>
+
+<ul>
+  <% @student.projects.each do |project| %>
+    <li><%= project.name %></li>
+  <% end %>  
+</ul>

@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :authenticate, only: [:destroy]
+
   def new
   end
 
@@ -12,8 +14,13 @@ class SessionsController < ApplicationController
       flash[:notice] = "Signed in!"
       redirect_to students_path
     else
+      flash.now[:alert] = "Invalid email or password"
+      render :new
     end
-    # if user exists and if user is authenticated, log them in
-    # if not, render :new view with flash message
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path, notice: "Successfully logged out"
   end
 end

@@ -1,0 +1,36 @@
+<h1>Add New Project</h1>
+
+<%= form_for @project do |f| %>
+
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@project.errors.count, "error") %> prevented this project from being saved 
+      </h2>
+
+      <ul>
+        <% @project.errors.full_messages.each do |error| %>
+          <li>
+            <%= error %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :student_id %>
+    <%= collection_select(:project, :student_id, Student.all, :id, :email, prompt: true) %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+  
+
+<% end %>
