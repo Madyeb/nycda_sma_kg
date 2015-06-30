@@ -13,6 +13,12 @@
   <p> Student not found </p>
 <% end %>
 
+<h2>Courses</h2>
+<ul>
+  <% @student.courses.each do |course| %>
+    <li><%= course.name %></li>
+  <% end %>
+</ul>
 
 <h2> Projects </h2>
 
@@ -21,3 +27,5 @@
     <li><%= project.name %></li>
   <% end %>  
 </ul>
+
+

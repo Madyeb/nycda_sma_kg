@@ -41,6 +41,10 @@
     <%= f.text_field :status %>
   </div>
 
+  <div>
+    <%= collection_check_boxes(:student, :course_ids, Course.all, :id, :name) %>
+  </div>
+
 
   <%= f.submit %>
 
