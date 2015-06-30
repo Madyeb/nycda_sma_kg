@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :students
   resources :users, only: [:new, :create]
   resources :projects, only: [:new, :create]
+  resources :courses
 
   get '/sign_in', to: 'sessions#new'
   post '/sign_in', to: 'sessions#create'

@@ -1,0 +1,11 @@
+<h1>course Profile</h1>
+
+<p><%= link_to "Back to courses", courses_path %></p>
+<p><%= link_to "Edit course", edit_course_path(@course) %></p>
+
+<% if @course %>
+  <p><span>Name:</span> <%= @course.name %></p>
+
+<% else %>
+  <p> course not found </p>
+<% end %>
