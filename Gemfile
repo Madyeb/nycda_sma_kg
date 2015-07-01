@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt'
 
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
@@ -18,3 +19,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'rails_12factor', group: :production
+
+ruby "2.1.5"
