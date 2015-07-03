@@ -14,21 +14,3 @@
  *= require_self
  */
 
-#error_explanation {
-  color: red;
-}
-
-.navbar {
-  float: right;
-  width: 600px;
-}
-
-.navbar ul {
-  float: left;
-}
-
-.navbar li {
-  list-style-type: none;
-  float: left;
-  margin-left: 7px;
-}

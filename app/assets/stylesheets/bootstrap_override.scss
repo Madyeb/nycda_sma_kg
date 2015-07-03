@@ -1,0 +1,33 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body { padding-top: 70px; }
+
+#error_explanation {
+  color: red;
+}
+
+.nav .user-email-label {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.student_thumb_photo img {
+  width: 100px;
+  height: 100px;
+}
+
+.page-title {
+  h1 {
+    float: left;
+    width: 300px;
+  }
+
+  a {
+    display: inline-block;
+    float: right;
+    margin-top: 20px
+  }
+}
