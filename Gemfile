@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt'
 gem 'paperclip', "~> 4.3"
+gem 'simple_form'
+gem 'devise'
 
 
 gem 'sdoc', '~> 0.4.0', group: :doc

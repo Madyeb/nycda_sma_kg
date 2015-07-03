@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'home#index'
 
   resources :students
   resources :users, only: [:new, :create]
   resources :projects, only: [:new, :create]
   resources :courses
-
-  get '/sign_in', to: 'sessions#new'
-  post '/sign_in', to: 'sessions#create'
-  delete '/sign_out', to: 'sessions#destroy'
-
-  # resources :sessions
 end
